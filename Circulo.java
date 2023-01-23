@@ -7,9 +7,14 @@ public class Circulo {
 	public float area;
 	public float id;
 
+	public Circulo() {
+		this(176895);
+	}
+
 	public Circulo(int radio) {
 		this.radio = radio;
 	}
+	
 	public float calcularCircunferencia() {
 		float pi = (float) Math.PI;
 		float circun = 2*pi*radio;
