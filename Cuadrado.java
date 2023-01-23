@@ -6,9 +6,9 @@ public class Cuadrado {
 	public float diagonal;
 	public float perimetro;
 	public float id;
-	
-	public Cuadrado(int longuitud) {
-		this(176895);	
+		
+	public Cuadrado() {
+		this(176895);
 	}
 	
 	public Cuadrado(int longuitud) {
