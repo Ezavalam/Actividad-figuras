@@ -2,7 +2,7 @@ package cuadrado;
 
 public class Circulo {
 
-	public int radio;
+	public float radio;
 	public float circunferencia;
 	public float area;
 	public float id;
@@ -11,9 +11,10 @@ public class Circulo {
 		this(176895);
 	}
 
-	public Circulo(int radio) {
+	public Circulo(float radio) {
 		this.radio = radio;
 	}
+
 	
 	public float calcularCircunferencia() {
 		float pi = (float) Math.PI;
