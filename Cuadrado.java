@@ -8,7 +8,12 @@ public class Cuadrado {
 	public float id;
 	
 	public Cuadrado(int longuitud) {
-		this.longuitud = longuitud;	}
+		this(176895);	
+	}
+	
+	public Cuadrado(int longuitud) {
+		this.longuitud = longuitud;	
+	}
 	
 	public double calculaDiagonal() {
 		return Math.sqrt(longuitud*longuitud + longuitud*longuitud);
