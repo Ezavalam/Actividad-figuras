@@ -1,7 +1,6 @@
-package cuadrado;
+package actividad4;
 
 public class Cuadrado {
-	
 	public int longuitud;
 	public float diagonal;
 	public float perimetro;
