@@ -1,7 +1,7 @@
 package actividad4;
 
 public class Cuadrado {
-	public int longuitud;
+	public double lado;
 	public float diagonal;
 	public float perimetro;
 	public float id;
@@ -10,20 +10,20 @@ public class Cuadrado {
 		this(176895);
 	}
 	
-	public Cuadrado(int longuitud) {
-		this.longuitud = longuitud;	
+	public Cuadrado(double lado) {
+		this.lado = lado;	
 	}
 	
 	public double calculaDiagonal() {
-		return Math.sqrt(longuitud*longuitud + longuitud*longuitud);
+		return Math.sqrt(lado*lado + lado*lado);
 	}
 	
-	public float calculaPerimetro() {
-		return longuitud*4;
+	public double calculaPerimetro() {
+		return lado*4;
 	}
 	
-	public float calculaArea() {
-		return longuitud*longuitud;
+	public double calculaArea() {
+		return lado*lado;
 	}
 	
 }
