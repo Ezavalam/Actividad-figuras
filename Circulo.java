@@ -1,7 +1,6 @@
-package cuadrado;
+package actividad4;
 
 public class Circulo {
-
 	public float radio;
 	public float circunferencia;
 	public float area;
