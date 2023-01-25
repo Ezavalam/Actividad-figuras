@@ -1,29 +1,28 @@
 package actividad4;
 
-public class Cuadrado {
-	public int longuitud;
-	public float diagonal;
-	public float perimetro;
+public class Circulo {
+	public float radio;
+	public float circunferencia;
+	public float area;
 	public float id;
-		
-	public Cuadrado() {
+
+	public Circulo() {
 		this(176895);
 	}
-	
-	public Cuadrado(int longuitud) {
-		this.longuitud = longuitud;	
+
+	public Circulo(float radio) {
+		this.radio = radio;
 	}
+
 	
-	public double calculaDiagonal() {
-		return Math.sqrt(longuitud*longuitud + longuitud*longuitud);
+	public float calcularCircunferencia() {
+		float pi = (float) Math.PI;
+		float circun = 2*pi*radio;
+		return circun;
 	}
-	
-	public float calculaPerimetro() {
-		return longuitud*4;
+	public float calcularArea() {
+		float pi = (float) Math.PI; 
+		float area = pi*radio*radio ;
+		return area;
 	}
-	
-	public float calculaArea() {
-		return longuitud*longuitud;
-	}
-	
 }
