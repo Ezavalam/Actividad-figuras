@@ -1,47 +1,59 @@
 package actividad4;
 
+import java.util.Scanner; 
+
 public class Main {
 	public static void main(String[] args) {
-			
-		Scanner fig_scan = new Scanner(System.in);
+
 		System.out.println("Que figura quieres que se calcule: cuadrado o circulo. ");
-		System.out.println("La figura sera: " + fig_scan);
+		Scanner fig_scan = new Scanner(System.in);
+		String escrito = fig_scan.nextLine();
 		
-		if (fig_scan == "cuadrado") {
-			Cuadrado uno = new Cuadrado();
-			
-			Scanner lado_scan = new Scanner(System.in);
+		
+		if (escrito.contains("cuadrado")) {
+
 			System.out.println("Cuanto medira el lado del cuadrado: ");
-			double double_lado = Double.parseDouble(lado_scan);
+			Scanner lado_scan = new Scanner(System.in);
+			String lado = lado_scan.nextLine();
+			double double_lado = Double.parseDouble(lado);
+
+			Cuadrado uno = new Cuadrado(double_lado);
 			
-			Scanner calc_scan = new Scanner(System.in);
 			System.out.println("Que quieres que se le calcule al cuadrado: la diagonal, el perimetro o el area. ");
+			Scanner calc_scan = new Scanner(System.in);
+			String calcular = calc_scan.nextLine();
+
 			
-			if (calc_scan == "diagonal") {
+			if (calcular.equals("diagonal")) {
 				System.out.println("Diagonal del cuadrado: " + uno.calculaDiagonal());
 			}
-			else if (calc_scan == "perimetro") {
+			else if (calcular.equals("perimetro")) {
 				System.out.println("Perimetro del cuadrado: " + uno.calculaPerimetro());
 			}
-			else if (calc_scan == "area") {
+			else if (calcular.equals("area")) {
 				System.out.println("Area del cuadrado: " + uno.calculaArea());
 			}	
 		}
 		
-		if (fig_scan == "circulo") {
-			Circulo dos = new Circulo();
+		if (escrito.equals("circulo")) {
+			
 		
-			Scanner rad_can = new Scanner(System.in);
 			System.out.println("Cuanto medira el radio del circulo: ");
-			double double_rad = Double.parseDouble(rad_scan);
+			Scanner rad_scan = new Scanner(System.in);
+			String radio = rad_scan.nextLine();
+			double double_rad = Double.parseDouble(radio);
 			
-			Scanner calc_scan = new Scanner(System.in);
+			Circulo dos = new Circulo(double_rad);
+			
 			System.out.println("Que quieres que se le calcule al cuadrado: la circunferencia o el area. ");
+			Scanner calc_scan = new Scanner(System.in);
+			String calcular = calc_scan.nextLine();
 			
-			if (calc_scan == "circunferencia") {
+			
+			if (calcular.equals("circunferencia")) {
 				System.out.println("Circunferencia del circulo:" + dos.calcularCircunferencia());
 			}
-			else if (calc_scan == "area") {
+			else if (calcular.equals("area")) {
 				System.out.println("Area del circulo:"+ dos.calcularArea());
 			}	
 			
